@@ -2,8 +2,8 @@ const resolvers = {
   Query: 
     {
     // returns an array of Tracks that will be used to populate the homepage grid of our web client
-    tracksForHome: (_parent, _args, { dataSources }, _info) =>
-      dataSources.trackAPI.getTracksForHome(),
+    tracks: (_parent, _args, { dataSources }, _info) =>
+      dataSources.trackAPI.getTracks(),
 
     // get a single track by ID, for the track page
     track: (_parent, { id }, { dataSources }, _info) => dataSources.trackAPI.getTrack(id),
